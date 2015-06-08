@@ -42,6 +42,7 @@ git reset -- hard - updates working copy to reflect new commit
 :q - to exit out
 :wq - commit the message you typed
 
+
 Exercise 2
 
 1. What's the difference between GitHub and git? Could git exist without GitHub? Could GitHub exist without git?
@@ -65,4 +66,63 @@ Git is the revision control system. The tool we are using to manage our source c
 - git fetch downloads objects and refs from another repository
 - git merge joins 2 or more development histories into the current version
 - git pull does a git fetch followed by a git merge
+
+
+Exercise 4
+
+Steps that happen when entering a URL into the browser:
+
+- browser extracts domain from URL
+- domain query goes to DNS server (or browser if cached or OS if present) to find IP address using fastest route (routing tables find fastest way to navigage to server via nodes)
+- browser assembles request to IP address
+- request is sent to IP address via router, ISP, and other nodes
+- webserver generates a response and sends packets back to user
+- browser parses packets to render the data sent back
+
+1. What is a request?
+
+An HTTP request which includes a message with a request-line, an optional header, and an optional message body which is then sent to a server
+
+2. What is making the request?
+
+The browser.
+
+3. Where does the request go (like physically, on Earth, as well as conceptually, on the internet)? 
+
+To the computer/server that has the IP address found in the DNS server.
+
+4. What's its "address"?
+
+It's address, or IP (Internet Protocol) address, is a numerical label assigned to every device using the internet. Like its physical address, it's IP address is used to find the location of the server on the internet.
+
+5. What happens to the request when it gets "there"?
+
+The request is processed and a response is packaged together and sent back. 
+
+6. What comes back? What is it? What data does it contain?
+
+Usually an html or other type of media response sent back in packages. 
+
+7. What happens when it comes back?
+
+The packages are parsed by browser and displayed on the screen. 
+
+
+Exercise 5
+
+1. What shows up on the screen?
+
+404 Error. There's not GitHub page here. Documentation links to set up a page.
+
+2. What does it mean?
+
+That the webpage I was looking for could not be found on the server. 
+
+3. Why is the error it displays that particular number?
+
+Errors in the 400 usually signal that the clients has erred. 404 in particular means that the page can't be found on the server and doesn't exist at that point in time. 
+
+4. Does this in fact mean that Ruby does not rock?
+
+Nope. 
 
