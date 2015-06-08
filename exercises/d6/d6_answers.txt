@@ -1,0 +1,68 @@
+Exercise 1
+
+1. What does the git init command do?
+
+Creates a .git directory with subdirectories – basiscally it creates a new Git repository.
+
+2. What does git add do? How is it different from git commit?
+
+This adds/updates the index with content in the working tree to prepare the content for the commit stage. It doesn't "commit" yet. Commit actually saves them online.
+
+3. What is the difference between staged and committed (or versioned) files?
+
+Staged files are in the index - not in your working copy and not in the datastore but halfway in between. Gitready.com refers to staged files as like in a loading dock. Committed files are files that are actually on the datastore.
+
+4. What's the shortcut for adding all files and commiting them?
+
+git add - to add all files
+git commit - to commit all files
+git coa "message" - adds and commits all files with a single command
+
+5. How do you unstage a staged file? How do you go back to an old version of a committed file?
+
+git reset <file> – unstage specific file
+git reset - unstages all files
+git checkout #{commit number} - go back to old version and check it out
+
+
+6. Why are commit messages very important?
+
+Helps you keep track of what changes each version contain but more importantly, helps reviewers of your code understand what changes you made and why.
+
+7. How do I revert to a previous commit (i.e. go back to an earlier "draft")?
+
+revert working copy to older commit:
+git reset #{commit number} - resets index to formet commit
+git reset --soft Head@{1} - moves point back to previous head
+git commit -m "message"
+git reset -- hard - updates working copy to reflect new commit
+
+8. How do you exit out of vi? (Also called vim.)
+
+:q - to exit out
+:wq - commit the message you typed
+
+Exercise 2
+
+1. What's the difference between GitHub and git? Could git exist without GitHub? Could GitHub exist without git?
+
+Git is the revision control system. The tool we are using to manage our source code histories. Git is responsible for keeping track of changes to content (usually source code files), and it provides mechanisms for sharing that content with others. GitHub is a company that provides online hosting services for Git repositories. Git is the tool and GitHub is the service for projects using Git. GitHub lets you see Git repositories without using command line.
+
+2. Why is GitHub a cool company?
+
+- It's the social network for developers. 
+- GitHub is now the largest online storage space of collaborative works in the world
+- You can brush elbows with the best of developers, view their code, build on it.
+- You can use it for free
+
+3. What does git push do?
+
+- "pushes" local branch to remote repository
+
+4. What does git pull do? How is it different from/same as git fetch and git merge?
+
+- git pull will merge any pulled commits into the branch you are currently working in. Pull automatically merges the commits without letting you review them first. 
+- git fetch downloads objects and refs from another repository
+- git merge joins 2 or more development histories into the current version
+- git pull does a git fetch followed by a git merge
+

@@ -1,0 +1,22 @@
+body{
+	background: url("../images/background.jpg") repeat;
+	background-size: cover;
+	color: rgba(0,0,128,1);
+	text-align: center;
+	position: relative;
+}
+
+img{
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	margin: 40px 0px 0px 0px;
+
+
+}
+
+@media (max-width: 500px){
+      h1 {
+        margin-top: 12px;
+      }
+    }
