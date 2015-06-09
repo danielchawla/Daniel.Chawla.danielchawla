@@ -1,0 +1,106 @@
+1. Create a User with a name and followers count
+
+user = User.new(:id => 5, :name => "Chuck", :followers => 84)
+user.save
+OR
+user = User.create(:id => 5, :name => "Chuck", :followers => 84)
+
+
+2. Find it with User.find. Assign the result to the variable user
+
+user = User.find(5)
+
+
+3. Find it by name with User.find_by
+
+user = User.find_by name: "Chuck"
+
+
+4. Write a command that finds all the users with followers count equal to 10.
+
+user_with_10_followers = User.where(:followers => 10)
+OR
+user_with_10_followers = User.where(followers: 10)
+
+
+5. Update user from step 2 to have a different name. Make sure to save!
+
+user.update_attributes(name: "Chuckle")
+OR
+user[:name] = "Chuckle"
+user.save
+
+
+6. Create a Tweet for this user. Assign the correct user_id, and make sure to save.
+
+tweet = Tweet.create(id: 6, body: "hey sexy!", user_id: 5)
+
+
+7. Update the tweet from step 6 to have a different body.
+
+tweet.update_attributes(body: "hey beautiful!")
+
+
+8. Destroy it.
+
+tweet = Tweet.find(6)
+tweet.destroy
+
+
+
+A bit harder now:
+
+9. Create 10 users programmatically, each with a different name. Use a loop—you might want to write pseudo-code first!
+
+count = 0
+last_id = User.last[:id]
+
+while count <= 10
+	last_id += 1
+	count += 1
+	user = User.new(id: last_id, name: "User #{count}")
+	user.save
+end
+
+
+10. Destroy them all
+
+count = 1
+while (count <= 10)
+	user_to_delete = User.find_by name: "User #{count}"
+	user_to_delete.destroy
+	count += 1
+end
+
+
+11. Create 10 tweets in a similar way.
+
+count = 0
+last_id_incremented = Tweet.last[:id]
+user_id = 1
+
+while count <= 10
+	last_id_incremented += 1
+	count += 1
+	tweet = Tweet.create(id: last_id_incremented, body: "hey, this is tweet #{count}", user_id: user_id)
+end
+
+
+12. Update all of them to have the body "Ruby is fat"
+
+count = 1
+while (count <= 10)
+	tweet_to_edit = Tweet.find_by body: "hey, this is tweet #{count}"
+	tweet_to_edit.update_attributes(body: "Ruby is fat")
+	count += 1
+end
+
+
+13. Update the fourth one to say "Ruby is getting even fatter"
+
+tweet = Tweet.last
+last_id = tweet[:id]
+id_to_edit = last_id - 6
+tweet = Tweet.find(id_to_edit)
+tweet.update_attributes(body: "Ruby is getting even fatter")
+

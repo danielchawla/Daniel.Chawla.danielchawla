@@ -1,0 +1,20 @@
+Class or instance method?
+
+.all - Class 
+.first - Class 
+.new - Instance 
+.find - Class
+.find_by - class
+.where - class
+.save - instance
+.update_attributes - instance
+.destroy - instance
+
+
+2. What's the difference between .find and .find_by?
+
+.find is usually used to retreive a row by ID whereas .find_by is used when you're searching for information within a column.
+
+3. What's the difference between .where and .find_by?
+
+.where you can easily add additional search criteria to whereas .find_by is limited to the field of the dynamic selector. Also, .where returns all instances of where the criteria is true where .find_by returns one. 

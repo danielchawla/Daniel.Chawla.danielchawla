@@ -78,7 +78,7 @@ def game_over?(board)
 	end
 
 	if count == 0
-		puts "Cat's game. Thanks for playing!"
+		puts "Tie game. Thanks for playing!"
 		return true
 	end
 

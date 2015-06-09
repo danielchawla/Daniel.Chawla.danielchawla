@@ -1,0 +1,27 @@
+1. What is a database?
+
+A database is a collection of information organized in such a way that a computer program can quickly select desired pieces of data. It's an electronic filing system.
+
+2. What is a database table? How does it relate to a database? What's a good analogy for a database table (i.e. a way to visualize it)?
+
+A table is a collection of related data held in a structured format within a database. It consists of fields (columns), and rows. It has vertical columns (which are identified by their name) and horizontal rows, the cell being the unit where a row and column intersect. A table has a specified number of columns, but can have any number of rows. Each row is identified by one or more values appearing in a particular column subset. The columns subset which uniquely identifies a row is called the primary key.
+
+3. Draw the tweets database table
+
+_ID_|__Text__|__Author___|__Date__|__Hash_Tags_|_Favorites__|__Comments__|__Retweets__|__Location__|
+____|________|___________|________|____________|____________|____________|____________|____________|
+____|________|___________|________|____________|____________|____________|____________|____________|
+____|________|___________|________|____________|____________|____________|____________|____________|
+
+4. Why do we use models/resources at all?
+
+It helps us know how to set up our databases and data structures allows us to see how things will interact at the high-level before we go down and code it.
+
+5. What is ActiveRecord?
+
+Active Record is the M in MVC — the layer of the system responsible for representing data and logic. AR is an ORM (Object Relational Mapping). It does the translations between Ruby objects and the database which deals with records and relations.
+
+6. What's the difference between a database table, resource and an ActiveRecord model?
+
+Active Record is the component that associates a class to the database. This will give the class functionality such as methods that make it easy to pull records from the database (An example is the find method).
+A resource is similar to ActiveRecord. Instead of being backed by a database, however, an ActiveResource object is backed by another application through a web service API.

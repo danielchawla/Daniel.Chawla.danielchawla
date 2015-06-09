@@ -1,0 +1,42 @@
+Assume at the very least that there are users who have accounts, and they can add items to their shopping carts. We'll follow the model from in class:
+
+1. What are the relevant views or pages? Come up with at least 7.
+
+- Home Page
+- Shopping Cart
+- Search Page
+- Product Pages
+- FAQs Page
+- Account Page
+- Today's Deals
+- Sign up page
+- Log in page
+
+2. What data do we want to store? List all the information we could ever want to store (for example, "items that are in a user's shopping cart"). Come with at least 10.
+
+- User's Personal info (Birthdate, Gender, Mailing Address, Credit Card Number)
+- User's preferences
+- Item in user's shopping cart
+- Item's info - price, ratings, reviews, description
+- Order - time, amount $$, ETA, address, tracking #
+- Category - name
+
+3. What actions can be done? Try to think in terms of who or what does what action to what data ("A user creates a tweet"). Also think CRUD!
+
+- A user updates personal info
+- A user signs up
+
+
+
+4. Can you group your data into models (i.e. Tweet or User)? What are those models? A great starting place to think up of models are the actors or actees of your actions (in the above example a user and a tweet). Note that there are often no "right" answers to these questions—it's up to you, the designer, to determine how your app works. What are the attributes (name, handle, body, price, etc.) of each model? How do you decide what's an attribute and what's another model entirely?
+What are the relationships between the models? Note which ones "belong to" others, "have many" others, or "have and belong to many" others. Draw a model diagram like we did in class.
+
+Classes
+
+User - name, address, password, credit card, preferences, shopping cart
+Order - time, amount $$, ETA, address, tracking #
+Item - name, price, rating, description, image
+Category - name
+Cart - 
+
+5. Finally, draw the tables for each model, including all of its attributes. Include any join tables you have as well.
